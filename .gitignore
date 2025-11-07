@@ -1,0 +1,14 @@
+# data & models
+data/*
+models/*.pth
+models/checkpoints/*
+outputs/*
+!outputs/examples/**
+!outputs/metrics.json
+!.gitkeep
+
+# Python/venv
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/

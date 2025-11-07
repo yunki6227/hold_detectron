@@ -1,0 +1,13 @@
+# Core scientific stack
+numpy>=1.24
+opencv-python>=4.8
+pycocotools>=2.0.7
+tqdm>=4.66
+
+# Torch – install the matching build for your system/CUDA from pytorch.org if needed
+torch>=2.2
+torchvision>=0.17
+
+# Build helpers (useful on some platforms)
+setuptools>=68
+wheel>=0.41
