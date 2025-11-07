@@ -2,9 +2,6 @@
 data/*
 models/*.pth
 models/checkpoints/*
-outputs/*
-!outputs/examples/**
-!outputs/metrics.json
 !.gitkeep
 
 # Python/venv
