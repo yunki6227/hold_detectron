@@ -161,11 +161,17 @@ Use the notebook to **understand the process**, and the script for **consistent 
 ---
 
 📝 License & Attribution
+
 Code released for research and educational purposes.
+
 Built using Detectron2 by Meta AI.
+
 Please ensure you have rights to any climbing imagery used for reproduction.
 
 Author: Yunki Cho
+
 📧 Contact for dataset or collaboration inquiries.
+
+yunki6227@gmail.com
 
 ---
