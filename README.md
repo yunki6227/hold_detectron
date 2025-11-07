@@ -71,17 +71,17 @@ Each image was annotated using the open-source tool **[CVAT (Computer Vision Ann
 > Use **WSL2 + Ubuntu** or a Linux environment for best results.
 
 1. **Create and activate a virtual environment**
-   ```bash
-   # Linux / macOS
-   python -m venv .venv && source .venv/bin/activate
-   # Windows PowerShell
-   python -m venv .venv; .\.venv\Scripts\Activate.ps1
-   ```
+```bash
+# Linux / macOS
+python -m venv .venv && source .venv/bin/activate
+# Windows PowerShell
+python -m venv .venv; .\.venv\Scripts\Activate.ps1
+```
 
 ### 2. Install core dependencies
-    ```bash
-    pip install -r requirements.txt
-    ```
+```bash
+pip install -r requirements.txt
+```
 
 ### 3. Install PyTorch + Detectron2
 
@@ -89,28 +89,29 @@ Visit pytorch.org to choose the correct command for your OS/CUDA.
 
 Then install Detectron2 using the matching wheel:
 
-    ```bash
-    # Example (CUDA 12.1 + Torch 2.2)
-    pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
-    pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu121/torch2.2/index.html
-    ```
+```bash
+# Example (CUDA 12.1 + Torch 2.2)
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+pip install detectron2 -f https://dl.fbaipublicfiles.com/detectron2/wheels/cu121/torch2.2/index.html
+```
 
 ---
 
 ## 🚀 Usage
 
 ### ✅ Train + Evaluate + Visualize
-    ```bash
-    python src/hold_detectron.py \
-    --taskA_json /path/to/taskA/instances_default.json \
-    --taskA_root /path/to/taskA/images \
-    --taskB_json /path/to/taskB/instances_default.json \
-    --taskB_root /path/to/taskB/images \
-    --taskC_json /path/to/taskC/instances_default.json \
-    --taskC_root /path/to/taskC/images \
-    --output_dir outputs \
-    --max_iter 8000
-    ```
+
+```bash
+python src/hold_detectron.py \
+--taskA_json /path/to/taskA/instances_default.json \
+--taskA_root /path/to/taskA/images \
+--taskB_json /path/to/taskB/instances_default.json \
+--taskB_root /path/to/taskB/images \
+--taskC_json /path/to/taskC/instances_default.json \
+--taskC_root /path/to/taskC/images \
+--output_dir outputs \
+--max_iter 8000
+```
 
 Training progress and metrics appear in the terminal.
 
@@ -123,18 +124,18 @@ Visualized predictions are saved to outputs/viz_samples/.
 ### 🧩 Evaluate only (skip training)
 If you already have a trained model:
 
-    ```bash
-    python src/hold_detectron.py \
-    --taskA_json /path/to/taskA/instances_default.json \
-    --taskA_root /path/to/taskA/images \
-    --taskB_json /path/to/taskB/instances_default.json \
-    --taskB_root /path/to/taskB/images \
-    --taskC_json /path/to/taskC/instances_default.json \
-    --taskC_root /path/to/taskC/images \
-    --output_dir outputs \
-    --skip_train \
-    --weights models/model_final.pth
-    ```
+```bash
+python src/hold_detectron.py \
+--taskA_json /path/to/taskA/instances_default.json \
+--taskA_root /path/to/taskA/images \
+--taskB_json /path/to/taskB/instances_default.json \
+--taskB_root /path/to/taskB/images \
+--taskC_json /path/to/taskC/instances_default.json \
+--taskC_root /path/to/taskC/images \
+--output_dir outputs \
+--skip_train \
+--weights models/model_final.pth
+```
 
 ---
 
